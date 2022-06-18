@@ -1,4 +1,6 @@
 import random
+import difflib
+
 def randomKong():
     file = open("kongpendium.txt", "r")
     lines = file.readlines()
@@ -18,3 +20,8 @@ def addKong(newKong):
         writefile.write(newKong)
         writefile.close()
         return True
+
+def similarKong(similarKong):
+    file = open("kongpendium.txt", "r")
+    lines = file.readlines()
+    return difflib.get_close_matches(similarKong, lines)
