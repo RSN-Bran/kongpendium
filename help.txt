@@ -2,5 +2,5 @@ Kongmands:
 !kong - Gives a random kong
 !newkong/!addkong <kong> - adds a new kong to the list
 !allkong - provides a text file with all kongs
-!similarkong <kong> - Chjecks for any kongs that might be similar to your input
+!similarkong <kong> - Checks for any kongs that might be similar to your input
 !help - you are looking at it"
