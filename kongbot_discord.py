@@ -42,7 +42,6 @@ async def on_message(message):
     elif message.content.lower().startswith("!similarkong "):
         similarKong = message.content.replace("!similarkong ", "")
         similarKongs = kongbot.similarKong(similarKong)
-        print(similarKongs)
         await message.channel.send("These are the closest kongs:\n" + ''.join(similarKongs))
 
     elif message.content.lower() == "!help":
