@@ -6,7 +6,9 @@ from dotenv import load_dotenv
 load_dotenv()
 
 TOKEN = os.getenv("DISCORD_TOKEN")
-client = discord.Client()
+intents=discord.Intents.default()
+intents.message_content = True
+client = discord.Client(intents=intents)
 
 @client.event
 async def on_ready():
@@ -21,7 +23,6 @@ async def on_message(message):
         await message.channel.send('All Kongs', file=discord.File("kongpendium.txt"))
 
     else:
-        return kongbot_parse.parse(message.content, "discord")
-    
+        await message.channel.send(kongbot_parse.parse(message.content, "discord"))    
 
 client.run(TOKEN)
