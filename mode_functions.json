@@ -1,0 +1,17 @@
+{
+    "randomKong" : [
+        "twitch", "twitter", "discord"
+    ],
+    
+    "addKong": [
+        "twitch", "discord"
+    ],
+
+    "similarKong": [
+        "twitch", "discord"
+    ],
+
+    "allKong": [
+        "discord"
+    ]
+}
