@@ -5,7 +5,8 @@ from dotenv import load_dotenv
 
 load_dotenv()
 
-TOKEN = os.getenv("KONGBOT_DISCORD_TOKEN")
+TOKEN = os.getenv("DISCORD_TOKEN")
+HOME_PATH=os.getenv("HOME_PATH")
 intents=discord.Intents.default()
 intents.message_content = True
 client = discord.Client(intents=intents)
@@ -20,9 +21,13 @@ async def on_message(message):
         return
 
     if message.content.lower() == "!allkong":
-        await message.channel.send('All Kongs', file=discord.File("kongpendium.txt"))
+        await message.channel.send('All Kongs', file=discord.File(HOME_PATH+"kongpendium.txt"))
 
     else:
-        await message.channel.send(kongbot_parse.parse(message.content, "discord"))    
+        response = kongbot_parse.parse(message.content, "discord", HOME_PATH)
+        if not response == "":
+            await message.channel.send(kongbot_parse.parse(message.content, "discord", HOME_PATH)) 
+        else:
+            return
 
 client.run(TOKEN)
