@@ -3,4 +3,4 @@ Kongmands:
 !newkong/!addkong <kong> - adds a new kong to the list
 !allkong - provides a text file with all kongs
 !similarkong <kong> - Checks for any kongs that might be similar to your input
-!help - you are looking at it"
+!help - you are looking at it

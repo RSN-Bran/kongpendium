@@ -19,7 +19,7 @@ def parse(message, mode, homePath):
 
         response = kongbot_functions.addKong(newKong+"\n", homePath)
 
-    elif message == "!helpkong" and mode in ["twitch", "discord"]:
+    elif message == "!help" and mode in ["twitch", "discord"]:
         response = kongbot_functions.help(homePath)
 
     elif message.startswith("!similarkong "):

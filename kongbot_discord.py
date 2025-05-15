@@ -26,7 +26,7 @@ async def on_message(message):
     else:
         response = kongbot_parse.parse(message.content, "discord", HOME_PATH)
         if not response == "":
-            await message.channel.send(kongbot_parse.parse(message.content, "discord", HOME_PATH)) 
+            await message.channel.send(response) 
         else:
             return
 
